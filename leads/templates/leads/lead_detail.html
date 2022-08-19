@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .lead {
-            padding: 10px 6px 10px 6px;
-            margin-top: 10px;
-            background: #f6f6f6;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h1>Hey there!</h1>
     <h3>This is the detail of {{lead.first_name}}</h3>
 
@@ -24,4 +10,4 @@
     <h4><a href="{% url  'leads:lead-update' lead.pk %}">Update lead</a></h4>
     <h4><a href="{% url 'leads:lead-delete' lead.pk %}">Delete lead</a></h4>
     <a href="{% url 'leads:lead-list' %}">Get back</a>
-</html>
+{% endblock content %}
