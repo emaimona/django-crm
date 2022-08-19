@@ -4,6 +4,16 @@ from django.http import HttpResponse
 from .models import Lead, Agent
 from .forms import LeadForm, LeadModelForm
 
+
+
+
+
+#from django.views import generics
+#class testListView(generics.ListView):
+ #   pass
+
+
+
 # Create your views here.
 
 class LandingPageView(TemplateView):
