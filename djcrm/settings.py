@@ -132,3 +132,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Later changes
 AUTH_USER_MODEL = 'leads.User'
+EMAIL_BAKEND = 'django.core.mail.backends.console.EmailBackend'
