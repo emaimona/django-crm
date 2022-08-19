@@ -16,6 +16,8 @@
 </head>
 <body>
     <h1>Hey there!</h1>
+    <a href="/lead/create/">Create a new Lead!</a>
+    <hr>
     <h2>This is all of our leads!</h2>
  
         {% for i in lead %} 
@@ -23,5 +25,7 @@
                 <a href="/leads/{{i.pk}}/"> {{ i.first_name }} {{ i.last_name }} </a> - {{i.age}}
             </div>
         {% endfor %}
+
+
 
 </html>
