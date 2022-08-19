@@ -16,13 +16,21 @@
 </head>
 <body>
     <h1>Hey there!</h1>
-    <a href="/lead/create/">Create a new Lead!</a>
-    <hr>
+    {% comment 'my first django comment'%}
+
+      firs we have the namespace and then the url name
+        that is {{% url 'namespace:url-name'%}}
+
+        for one line comment we have {# write here #}
+    {% endcomment %}
+     
+    <a href="{% url 'leads:lead-create'%}">Create a new Lead!</a>
+    <hr> 
     <h2>This is all of our leads!</h2>
  
         {% for i in lead %} 
             <div class="lead">
-                <a href="/leads/{{i.pk}}/"> {{ i.first_name }} {{ i.last_name }} </a> - {{i.age}}
+                <a href="{% url 'leads:lead-detail' i.pk %}"> {{ i.first_name }} {{ i.last_name }} </a> - {{i.age}}
             </div>
         {% endfor %}
 
